@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: #754ef9;
+    position: relative;
+}
+
+.help-container{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.help-holder{
+    width: 50%;
+    background-color: #5836ca;
+    border: 4px solid white;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+    margin-top: 10vh;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4), 0px -5px 20px rgba(0,0,0,.4);
+}
+.rule-list{
+    font-family: 'Comic Neue', cursive;
+    list-style: none;
+    padding-bottom: 5px;
+    border-bottom: 1px solid white;
+    color: white;
+    margin-top: 2vh;
+    font-weight: 700;
+}
+.rule-heading{
+    font-family: 'Comic Neue', cursive;
+    font-weight: bolder;
+    font-size: 30px;
+}
+.rule-ok{
+    width: 30%;
+    background-color: black;
+    border-radius: 20px;
+    color: white;
+    border: 2px solid white;
+    padding: 10px;
+    cursor: pointer;
+    transition: all ease .3s;
+}
+.rule-ok:hover{
+    background-color: transparent;
+    transform: scale(1.1);
+}
+.head-lost{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    display: none;
+}
+.container-lost{
+    height: 300px;
+    width: 300px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4), 0px -5px 20px rgba(0,0,0,.4);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vh;
+    background-color: #fff;
+}
+.lost-holder{
+    height: 50%;
+    width: 50%;
+    overflow: hidden;
+}
+.lost{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#home{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: blur(10px);
+}
+.container{
+    margin-top: 10vh;
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 15px 15px 50px rgba(0,0,0,.3), 0px -15px 50px rgba(0,0,0,.1);
+    padding: 10px;
+}
+.img-holder{
+    width: 30%;
+    height: 500px;
+    overflow: hidden;
+}
+.image{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.else-holder{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7vh;
+    width: 50%;
+}
+.answer-box{
+    display: flex;
+    list-style: none;
+    gap: 1vw;
+}
+.alphabet{
+    border-bottom: 2px solid black;
+    padding: 0px 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.hint-box{
+    width: 100%;
+}
+.hint{
+    font-weight: 500;
+    font-size: 17px;
+    text-align: center;
+    text-transform:capitalize;
+}
+.incorrect{
+    font-size: 15px;
+    font-weight: 400;
+}
+.counter{
+    color: red;
+}
+.buttons-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+}
+.first-line{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+}
+.last-line{
+    width: 85%;
+}
+.btn{
+    width: 40px;
+    height: 40px;
+    font-weight: 600;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 5px 5px 25px rgba(0,0,0,.3), 0px -5px 25px rgba(0,0,0,.1);
+    color: white;
+    background-color: #4023a0;
+    transition: all .2s ease;
+    font-size: 15px;
+}
+.btn:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+@media screen and (max-width:1200px) {
+    .img-holder{
+        width: 40%;
+    }
+}
+@media screen and (max-width:1025px) {
+    .img-holder{
+        height: 400px;
+    }
+    .else-holder{
+        gap: 5vh;
+    }
+    .help-container{
+        margin-top: 20vh;
+    }
+}
+@media screen and (max-width:950px) {
+    .btn{
+        height: 35px;
+        width: 35px;
+    }
+    .hint{
+        font-size: 15px;
+    }
+    .alphabet{
+        font-weight: 500;
+    }
+    .incorrect,
+    .counter{
+        font-size: 13px;
+    }
+    .container{
+        justify-content: none;
+    }
+    .rule-list{
+        font-size: 13px;
+    }
+    .help-container{
+        margin-top: 10vh;
+    }
+}
+@media screen and (max-width:870px) {
+    .container{
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+    }
+    .hint-box{
+        width: 80%;
+    }
+    .else-holder{
+        gap: 5vh;
+    }
+    .buttons-box{
+        gap: 1vh;
+    }
+}
+@media screen and (max-width:785px) {
+    .img-holder{
+        width: 50%;
+    }
+    .btn{
+        width: 30px;
+        height: 30px;
+        font-size: 10px;
+    }
+}
+@media screen and (max-width:700px) {
+    .container{
+        flex-direction: column;
+        gap: 10vh;
+    }
+    .img-holder{
+        height: 400px;
+        width: 70%;
+    }
+    .else-holder{
+        gap: 5vh;
+        width: 80%;
+    }
+    .first-line{
+        width: 90%;
+    }
+    .last-line{
+        width: 80%;
+    }
+    .btn{
+        height: 40px;
+        width: 40px;
+        font-size: 15px;
+    }
+    .help-holder{
+        width: 80%;
+    }
+    .help-container{
+        margin-top: 0px;
+    }
+}
+@media screen and (max-width:550px) {
+    .else-holder{
+        width: 95%;
+    }
+}
+@media screen and (max-width:460px) {
+    .img-holder{
+        margin-top: 5vh;
+        width: 90%;
+    }
+    .btn{
+        height: 35px;
+        width: 35px;
+        font-size: 12px;
+    }
+    .rule-ok{
+        width: 80%;
+    }
+}
+@media screen and (max-width:360px) {
+    .container{
+        gap: 0px;
+    }
+    .else-holder{
+        margin-top: -5vh;
+        width: 100%;
+    }
+    .img-holder{
+        width: 90%;
+    }
+    .btn{
+        height: 30px;
+        width: 30px;
+        font-size: 10px;
+    }
+    .first-line{
+        width: 95%;
+    }
+    .last-line{
+        width: 85%;
+    }
+    .rule-ok{
+        width: 100%;
+    }
+}

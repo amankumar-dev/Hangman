@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./word.js" defer></script>
+    <script src="./script.js" defer></script>
+    <title>Hangman</title>
+</head>
+<body>
+  <!-- Help -->
+  <div class="help-container">
+    <div class="help-holder">
+      <h2 class="rule-heading">Rule Box 😊</h2>
+      <ul class="rule-holder">
+        <li class="rule-list">First you need to read the hint which is given</li>
+        <li class="rule-list">And then you need to guess the answer of hint which is a word</li>
+        <li class="rule-list">Now click on the keys of alphabet for writing the word</li>
+        <li class="rule-list">If a word has same alphabet more than one then you just click that alphabet's key only one time rest it will take automitacally how much time it will be repeated</li>
+        <li class="rule-list">If you press the right key then the color of key will be change into green and if it's wrong key then it will change into red</li>
+        <li class="rule-list">You will get 10 chance to click right key for generate answer's word</li>
+        <li class="rule-list">You will be saw a ground in game whenever you click wrong key one object will be generate and when all human body's part hang on execute then the game is over</li>
+        <li class="rule-list">If you don't click wrong key 10 times then you will get message you won</li>
+        <li class="rule-list">Else you will get a message that you lost</li>
+        <li class="rule-list">This is message from Admin (Aman Kumar) I hope you will enjoy this game Just click let's play for continue 😁😀</li>
+      </ul>
+      <button class="rule-ok">Let's Play</button>
+    </div>
+  </div>
+  <!-- Lost section -->
+  <div class="head-lost">
+    <div class="container-lost">
+      <div class="lost-holder">
+        <img src="./images/lost.gif" alt="lost" class="lost">
+      </div>
+      <h2 class="you-lost">You Lost !!!</h2>
+    </div>
+  </div>
+
+  <!-- Home game section -->
+  <section id="home">
+    <div class="container">
+        <div class="img-holder">
+            <img src="./images/0bg.png" alt="base" class="image">
+        </div>
+        <div class="else-holder">
+            <ul class="answer-box"></ul>
+            <div class="hint-box">
+              <h4 class="hint"></h4>
+            </div>
+            <div class="guess-box">
+              <span class="incorrect">Incorrect Guess:</span>
+              <span class="counter">0/10</span>
+            </div>
+            <div class="buttons-box">
+              <div class="first-line">
+                <button class="btn">A</button>
+                <button class="btn">B</button>
+                <button class="btn">C</button>
+                <button class="btn">D</button>
+                <button class="btn">E</button>
+                <button class="btn">F</button>
+                <button class="btn">G</button>
+                <button class="btn">H</button>
+                <button class="btn">I</button>
+              </div>
+              <div class="first-line">
+                <button class="btn">J</button>
+                <button class="btn">K</button>
+                <button class="btn">L</button>
+                <button class="btn">M</button>
+                <button class="btn">N</button>
+                <button class="btn">O</button>
+                <button class="btn">P</button>
+                <button class="btn">Q</button>
+                <button class="btn">R</button>
+              </div>
+              <div class="first-line last-line">
+                <button class="btn">S</button>
+                <button class="btn">T</button>
+                <button class="btn">U</button>
+                <button class="btn">V</button>
+                <button class="btn">W</button>
+                <button class="btn">X</button>
+                <button class="btn">Y</button>
+                <button class="btn">Z</button>
+              </div>
+            </div>
+        </div>
+    </div>
+  </section>
+</body>
+</html>
